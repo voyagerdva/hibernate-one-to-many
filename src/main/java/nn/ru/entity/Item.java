@@ -18,7 +18,7 @@ public class Item {
     private Long id;
 
     // @ManyToOne: Item-Group - прямая
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "group_id")
     private Group group;
 }
